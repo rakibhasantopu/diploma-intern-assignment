@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/lib/jquery-3.7.1.min.js"></script>
+    <link href="/assets/css/jquery-confirm.min.css" rel="stylesheet">
+    <script src="/assets/js/lib/confirm/jquery-confirm.min.js"></script>
+    <script src="/assets/js/lib/pweb.message.box.js"></script>
+
+    <script>
+        jQuery(document).ready(function () {
+
+            jQuery(".login-confirm").confirm({
+                title: 'Confirmation!',
+                content: 'Are you sure want to Log-in?'
+            })
+
+        });
+    </script>
+
+<script>
+    jQuery(document).ready(function () {
+        let forms = document.querySelectorAll('.needs-validation')
+        let form = forms[0]
+        form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+            } else {
+                PWeb.messageBox.showMessage(true, "Your Registration Success")
+                form.reset()
+                event.preventDefault()
+                event.stopPropagation()
+                return false
+            }
+            form.classList.add('was-validated')
+        }, false)
+    });
+</script>
+
+    <title>Regestration</title>
+</head>
+<body>
+
+
+    <div class="card">
+        <div class="card-body">
+          <h5 class="card-title text-center">রেজিস্ট্রেশন করুন</h5>
+            <form class="needs-validation" noValidate>
+                <div class="container">
+                    <div class="row">
+
+                    <div class="col-4">
+                        <label class="form-label"><span class="text-danger me-1">*</span>Name</label>
+                        <input type="text" class="form-control" required>
+                        <div class="invalid-feedback">Please enter your Name</div>
+                    </div>
+
+                    <div class="col-4">
+                        <label class="form-label" required><span class="text-danger me-1">*</span>Mobile</label>
+                        <input type="tel" class="form-control" required >
+                        <div class="invalid-feedback">Please enter your Mobile</div>
+                    </div>
+                   
+
+                    <div class="col-4">
+                        <label class="form-label"><span class="text-danger me-1">*</span>
+                            Password</label>
+                        <input type="password" class="form-control" required>
+                        <div class="invalid-feedback">Please enter Password</div>
+                    </div>
+
+                    </div>
+
+
+
+                    <div class="row">
+
+                        <div class="col-4">
+                            <label class="form-label"><span class="text-danger me-1">*</span>E-mail</label>
+                            <input type="email" class="form-control" required>
+                            <div class="invalid-feedback">Please enter your E-mail</div>
+                        </div>
+    
+                        <div class="col-4">
+                            <label class="form-label" required><span class="text-danger me-1">*</span>Emergency Contact</label>
+                            <input type="tel" class="form-control" required >
+                            <div class="invalid-feedback">Please enter your Emergency Contact</div>
+                        </div>
+                       
+    
+                        <div class="col-4">
+                            <label class="form-label">Home District</label>
+                            <select name="Home District" id="District" class="form-control" required>
+                                <option value="">--Choose Your Home District--</option>
+                                <option value="Rangpur">Rangpur</option>
+                                <option value="Nilphamari">Nilphamari</option>
+                                <option value="Gaibandha">Gaibandha</option>
+                                <option value="Dinajpur">Dinajpur</option>
+                                <option value="Lalmonihat">Lalmonihat</option>
+                                <option value="Kurigram">Kurigram</option>
+                                <option value="Panchagar">Panchagar</option>
+                                <option value="Thakurgaon">Thakurgaon</option>
+                                
+                            </select>
+                        </div>
+    
+
+
+
+                        <div class="row">
+
+                            <div class="col-6">
+                                <label class="form-label">Study In (Diploma Engineering)</label>
+                                <input type="text" class="form-control" required>
+                                <div class="invalid-feedback">Please Fill This</div>
+                            </div>
+        
+                            <div class="col-6">
+                                <label class="form-label" >Institute Name</label>
+                                <input type="text" class="form-control" required >
+                                <div class="invalid-feedback">Please enter your Institute Name</div>
+                            </div>
+        
+                        </div>
+
+
+    
+                        <div class="col-4">
+                            <label class="form-label">Technology</label>
+                            <select name="Technology" id="Technology" class="form-control" required>
+                                <option value="">--Choose Your Technology--</option>
+                                <option value="Computer">Computer</option>
+                                <option value="Electrical">Electrical</option>
+                                <option value="Electronics">Electronics</option>
+                                <option value="Civil">Civil</option>
+                                <option value="Mechanical">Mechanical</option>
+                                <option value="Electromedical">Electromedical</option>
+                                <option value="Food">Food</option>
+                                <option value="Power">Power</option>
+                            
+                             </select>
+                        </div>
+                        <div class="col-4">
+                            <label class="form-label">Semester</label>
+                            <input type="text" class="form-control" required>
+                            <div class="invalid-feedback">Please enter your Semester</div>
+                        </div>
+
+                        <div class="col-4">
+                            <label class="form-label">Shift</label>
+                            <select name="Shift" id="Shift" class="form-control" required>
+                                <option value="">--Shift--</option>
+                                <option value="1st">1st</option>
+                                <option value="2nd">2nd</option>
+                             </select>
+                        </div>
+
+                        
+                        <div class="col-6">
+                            <label class="form-label">Present Adress</label>
+                            <textarea class="form-control" required></textarea>
+                            <div class="invalid-feedback">Please enter your Present Address</div>
+                        </div>
+                        <div class="col-6">
+                            <label class="form-label">Permanent Address</label>
+                            <textarea class="form-control" required></textarea>
+                            <div class="invalid-feedback">Please enter your Permanent Address</div>
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label">Comment</label>
+                            <textarea class="form-control" required></textarea>
+                        </div>
+                        
+
+                    </div>
+                   
+            
+            
+            
+            
+                </div>
+                <br>
+                <div class="text-center">
+                    <button class="btn btn-primary needs-validation">রেজিস্ট্রেশন</button>
+                    <button class="btn btn-secondary login-confirm">লগ ইন</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+
+    <script src="/assets/js/bootstrap-form-validator.js"></script>
+</body>
+</html>
