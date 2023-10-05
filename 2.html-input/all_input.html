@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/fonts/fontawesome-all.min.js"></script>
+    
+
+    <title>All Inputs</title>
+</head>
+<body>
+    <div class="container">
+
+    <div class="card">
+        <div class="card-body">
+          <h2 class="card-title text-center">All Inputs</h2>
+                
+                    <form action="#" method="post" enctype="multipart/form-data">
+
+                    <div class="row">
+                        <div class="col-4">
+                            <label for="first_Name">First Name</label>
+                            <input type="text" class="form-control" id="first-name" name="firstName" >
+                        </div>
+
+                        <div class="col-4">
+                            <label for="last-name">Last name</label>
+                            <input class="form-control" type="text" id="last-name" name="lastName">
+                        </div>
+
+                        <div class="col-4">
+                        <label for="email-address">Email Address</label>
+                        <input class="form-control" type="email" id="email-address" name="email" required>
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-4">
+                        <label for="cv">Upload CV</label>
+                        <input class="form-control" type="file" id="cv" name="cv">
+                        </div>
+                        <div class="col-4">
+                            <p>Choose your monster's features:</p>
+        
+                            <div>
+                                <input type="checkbox" id="scales" name="scales" checked>
+                                 <label for="scales">Scales</label> 
+                            </div>
+                        
+                            <input type="checkbox" id="horns" name="horns">
+                            <label for="horns">Horns</label>
+                        </div>
+        
+
+                        <div class="col-4">
+                            <label for="head">Color</label> 
+                            <input class="form-control" type="color" id="head" name="head" value="#e66465">
+                        </div>
+
+                        <div class="col-4">
+                            <label for="start">Start date:</label>
+                            <input class="form-control" type="date" id="start" name="trip-start" value="2018-07-22" min="2018-01-01" max="2018-12-31">
+                        </div>
+
+                        <div class="col-4">
+                                <label for="meeting-time">Choose a time for your appointment:</label> 
+                                <input class="form-control" type="datetime-local" id="meeting-time" name="meeting-time" value="2018-06-12T19:30" min="2018-06-07T00:00" max="2018-06-14T00:00">
+                        </div>
+
+                        <div class="col-4">
+                            <label for="email">Enter your globex.com email:</label>
+                            <input class="form-control" type="email" id="email"pattern=".+@hmtmcse\.com" size="30" required>
+                        </div>
+
+                        <div class="col-4">
+                            <label for="month-only">Start month:</label> 
+                            <input class="form-control" type="month" id="month-only" name="start" min="2018-03" value="2018-05">
+                        </div>
+
+                        <div class="col-4">
+                            <label for="tentacles">Number of tentacles (10-100):</label>
+                            <input class="form-control" type="number" id="tentacles" name="tentacles" min="10" max="100">
+                        </div>
+
+                        <div class="col-4">
+                            <label for="pass">Password (8 characters minimum):</label>
+                            <input class="form-control" type="password" id="pass" name="password" minlength="8" required>
+                        </div>
+
+                        <div class="col-4">
+                            <input type="radio" id="huey" name="drone" value="huey" checked>
+                            <label for="huey">Huey</label> <br>
+                            <input  type="radio" id="dewey" name="drone" value="dewey">
+                            <label for="dewey">Dewey</label>
+                        </div>
+
+                        <div class="col-4">
+                            <label for="customRange3" class="form-label">Volume</label>
+                            <input  type="range" class="form-range" id="volume" name="volume" min="0" max="11">
+                        </div>
+
+                        <div class="col-4">
+                            <input class="form-control" type="search" id="site-search" name="q">
+                            <button class="btn btn-primary">Search</button>
+                        </div>
+
+                        <div class="col-4">
+                            <label for="phone">Enter your phone number:</label>
+                            <input class="form-control" type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                        </div>
+
+                        <div class="col-4">
+                            <label for="appt">Choose a time for your meeting:</label>
+                            <input class="form-control" type="time" id="appt" name="appt" min="09:00" max="18:00" required>
+                        </div>
+
+                        <div class="col-4">
+                            <label for="url">Enter an URL:</label>
+                            <input class="form-control" type="url" name="url" id="url" placeholder="https://banglafighter.com" pattern="https://.*" size="30" required>
+                        </div>
+
+                        <div class="col-4">
+                            <label for="camp-week">Choose a week in May or June:</label>
+                            <input class="form-control" type="week" name="week" id="camp-week" min="2018-W18" max="2018-W26" required>
+                        </div>
+
+                        <div class="col-4">
+                            <label for="pet-select">Choose a pet:</label>
+                            <select class="form-control" name="pets" id="pet-select">
+                            <option value="">--Please choose an option--</option>
+                            <option value="dog">Dog</option>
+                             <option value="cat">Cat</option>
+                            <option value="hamster">Hamster</option>
+                            <option value="parrot">Parrot</option>
+                            <option value="spider">Spider</option>
+                            <option value="goldfish">Goldfish</option>
+                            </select>
+                        </div>
+
+                        <div >
+                            <label for="textarea">Text Area</label>
+                            <textarea class="col-12 " id="textarea" name="example">
+                                This is a Text Area
+                             </textarea>
+                        </div>
+
+                        
+
+                        <div >
+                            <input type="image" id="image" alt="Login" src="logo.png">
+                        </div>
+
+                        <br>
+                        <div>
+                            <button class="btn btn-primary"  type="Add to favorites" value="Add to favorites" >Add to favorites</button>
+                            <button class="btn btn-warning" type="reset" value="Reset">Reset</button>
+                            <button class="btn btn-success" type="submit" value="Save">save</button>
+                        </div>
+
+
+
+
+                        
+
+
+                    </form>
+                </div>
+        
+        </div>
+    </div>
+
+    </div>
+</body>
+</html>
